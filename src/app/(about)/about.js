@@ -7,7 +7,7 @@ const About = () => {
         <Image
           className="rounded-xl"
           alt="harshit"
-          src="/harshit.jpg"
+          src="/harshit.JPG"
           width={400}
           height={400}
           priority={true}
