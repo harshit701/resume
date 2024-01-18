@@ -1,5 +1,7 @@
+"use client";
 import { skills } from "@/data";
 import SkillCard from "./skillCard";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
@@ -10,7 +12,7 @@ const Skills = () => {
       <div className="flex">
         {skills.map((skill) => {
           return (
-            <div className={`flex-1`} key={skill.type}>
+            <motion.div className={`flex-1`} key={skill.type}>
               <h2
                 className={`columns-${skills.length} text-3xl underline mb-4`}>
                 {skill.type}
@@ -18,7 +20,7 @@ const Skills = () => {
               {skill.list.map((item) => (
                 <SkillCard skill={item} key={item.title} />
               ))}
-            </div>
+            </motion.div>
           );
         })}
       </div>
